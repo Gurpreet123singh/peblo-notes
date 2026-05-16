@@ -1,0 +1,7 @@
+# Setup Guide
+
+Run:
+```bash
+npm install
+npm run dev
+```
