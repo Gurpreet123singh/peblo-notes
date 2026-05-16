@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 type Note = {
   id: number;
@@ -169,7 +170,7 @@ export default function Home() {
       fetchNotes();
     } catch (error) {
       console.error(error);
-      alert("Something went wrong.");
+      toast.error("Something went wrong.");
     }
 
     setSaving(false);
